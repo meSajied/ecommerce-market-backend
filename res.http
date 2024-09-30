@@ -1,0 +1,23 @@
+### get data
+
+GET http://localhost:8080/order/all
+Content-Type: application/json
+
+### put data
+
+PUT http://localhost:8080/product/update-status
+Content-Type: application/json
+
+{
+  
+  "id": 1,
+  "name": "iPhone 14",
+  "price": 999,
+  "description": "Latest Apple iPhone with 128GB storage",
+  "stock": "In Stock",
+  "status": "INACTIVE",
+  "discount": "10%",
+  "imageUrl": "iphone14.jpg",
+  "createdAt": null
+          
+}
