@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000/", allowCredentials = "true")
+@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 @RequestMapping("/product")
 class ProductController {
   private final ProductService productService;
@@ -23,7 +23,7 @@ class ProductController {
   }
   
   @PutMapping("/update-status")
-  Optional<Product> updateProductStatusToActive(@Valid @RequestBody Product product) {
+  Optional<Product> updateProductStatusToActive(@RequestBody Product product) {
     return productService.updateStatus(product);
   }
 

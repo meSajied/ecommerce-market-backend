@@ -1,14 +1,14 @@
-package org.ecommerce.ecommerce_market_backend;
-/*
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+// package org.ecommerce.ecommerce_market_backend;
+// /*
+// import org.junit.jupiter.api.Test;
+// import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class EcommerceMarketBackendApplicationTests {
+// @SpringBootTest
+// class EcommerceMarketBackendApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+// 	@Test
+// 	void contextLoads() {
+// 	}
 
-}
-*/
+// }
+// */

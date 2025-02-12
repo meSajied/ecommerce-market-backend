@@ -7,6 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -34,14 +35,9 @@ public class Product {
 
   @Enumerated(EnumType.STRING)
   private ProductStatus status;
-  private String discount;
-  private String imageUrl;
+  private Long comission;
 
-  @CreationTimestamp
-  private LocalDateTime createdAt;
-
-  @ManyToOne
-  @JoinColumn(name = "subcategory_id")
+  @ManyToOne(cascade = CascadeType.ALL)
   @JsonBackReference
   private SubCategory subCategory;
 
@@ -101,28 +97,12 @@ public class Product {
     this.status = status;
   }
 
-  public String getDiscount() {
-    return discount;
+  public Long getComission() {
+     return comission;
   }
 
-  public void setDiscount(String discount) {
-    this.discount = discount;
-  }
-
-  public String getImageUrl() {
-    return imageUrl;
-  }
-
-  public void setImageUrl(String imageUrl) {
-    this.imageUrl = imageUrl;
-  }
-
-  public LocalDateTime getCreatedAt() {
-    return createdAt;
-  }
-
-  public void setCreatedAt(LocalDateTime createdAt) {
-    this.createdAt = createdAt;
+  public void setComission(Long comission) {
+     this.comission = comission;
   }
 
 }

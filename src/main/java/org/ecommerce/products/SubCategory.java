@@ -23,7 +23,6 @@ public class SubCategory {
   private String name;
   
   @ManyToOne
-  @JoinColumn(name = "category_id")
   @JsonBackReference
   private Category category;
 
